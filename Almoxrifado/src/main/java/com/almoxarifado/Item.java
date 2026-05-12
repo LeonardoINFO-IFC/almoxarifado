@@ -4,6 +4,10 @@
 
 package com.almoxarifado;
 
+import java.util.AbstractList;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author aluno
@@ -17,7 +21,10 @@ public class Item {
     private int quantidadeAtual;
     private int quantidadeMin;
     private String localizacao;
-    private boolean status;
+    private boolean status; 
+    private Categoria catego;
+    private List<Movimentacao> movimentacao = new ArrayList<Movimentacao>();
+    private Localizacao local; 
     
     public int getIdItem(){
         return idItem;
@@ -89,6 +96,30 @@ public class Item {
     
     public void setStatus(boolean _status){
         status = _status;
+    }
+    
+    public Categoria getCatego(){
+        return catego;
+    }
+    
+    public void setCatego(Categoria _catego){
+        catego = _catego;
+    }
+    
+    public List<Movimentacao> getMovimentacao(){
+        return movimentacao;
+    }
+    
+    public void setMovimentacao(List<Movimentacao> _movimentacao){
+        movimentacao = _movimentacao;
+    }
+    
+    public Localizacao getLocal(){
+        return local;
+    }
+    
+    public void setLocal(Localizacao _local){
+        local = _local;
     }
     
     public void criarItem(){

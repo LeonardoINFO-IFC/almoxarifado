@@ -4,6 +4,9 @@
  */
 package com.almoxarifado;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author aluno
@@ -11,8 +14,9 @@ package com.almoxarifado;
 public class Fornecedor {
     private int idFornecedor;
     private String nome;
-    private int senha;
-    private boolean perfil;
+    private int numeroContato;
+    private String cnpj;
+    private List<Item> item = new ArrayList<Item>();
     
     public int getIdFornecedor(){
         return idFornecedor;
@@ -30,19 +34,27 @@ public class Fornecedor {
         nome = _nome;
     }
     
-    public String getSenha(){
-        return senha;
+    public int getNumeroContato(){
+        return numeroContato;
     }
     
-    public void setSenha(String _senha){
-       senha = _senha;
+    public void setNumeroContato(int _numeroContato){
+       numeroContato = _numeroContato;
     }
     
-    public boolean getPerfil(){
-        return perfil;
+    public String getCnpj(){
+        return cnpj;
     }
     
-    public void setPerfil(boolean _perfil){
-        perfil = _perfil;
+    public void setCnpj(String _cnpj){
+        cnpj = _cnpj;
+    }
+    
+    public List<Item> getItem(){
+        return item;
+    }
+    
+    public void setItem(List<Item> _item){
+        item = _item;
     }
 }

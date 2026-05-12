@@ -4,7 +4,9 @@
  */
 package com.almoxarifado;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -20,6 +22,7 @@ public class Ocorrencia {
     private String status;
     private String sinistro;
     private String prioridade;
+    private List<Item> item = new ArrayList<Item>();
     
     public int getIdOcorrencia(){
         return idOcorrencia;
@@ -91,6 +94,14 @@ public class Ocorrencia {
     
     public void setLocalizacao(String _prioridade){
         prioridade = _prioridade;
+    }
+    
+    public List<Item> getItem(){
+        return item;
+    }
+    
+    public void setItem(List<Item> _item){
+        item = _item;
     }
     
 }
